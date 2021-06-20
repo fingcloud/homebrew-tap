@@ -5,28 +5,28 @@
 class Fing < Formula
   desc ""
   homepage "https://fing.ir"
-  version "0.1.2"
+  version "0.1.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.2/fing-0.1.2-darwin-amd64.tar.gz"
-      sha256 "5bdef340eac07069029b775cfd81a0db84bc6a8fa7758655c0750ea70d773881"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.3/fing-0.1.3-darwin-amd64.tar.gz"
+      sha256 "f0391a2aa6532884f2abdb5b5865f2ecba47f519c41a4827ed434a5602b03a62"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.2/fing-0.1.2-darwin-arm64.tar.gz"
-      sha256 "d3926912185d72112454d7c137ab3550b568b119e71639b262eb028675e83f20"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.3/fing-0.1.3-darwin-arm64.tar.gz"
+      sha256 "4c44537dd00b5bee999522f5d857681fe7e298967f99d25ae8cf48f0a537d793"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.2/fing-0.1.2-linux-amd64.tar.gz"
-      sha256 "93288b6756d9034b3feb063e7a0532b455d23ed99f67cdf5c1c8ac769479df37"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.3/fing-0.1.3-linux-amd64.tar.gz"
+      sha256 "f1b8f749721f79d5a7e4b6bddd4806522025e2e3e2406d5b9b732634d833a69f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.2/fing-0.1.2-linux-arm64.tar.gz"
-      sha256 "30ec4d7cf85713243aa677340f50f354ee4a7d893d7508ad46366ee863183f1e"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.3/fing-0.1.3-linux-arm64.tar.gz"
+      sha256 "6bfbc5873f59b5f7e9c15e7ab654d2024af29d75ef8e6bbe2da8572e962978fc"
     end
   end
 
