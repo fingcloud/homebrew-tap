@@ -11,22 +11,22 @@ class Fing < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/fingcloud/cli/releases/download/v0.1.10/fing-darwin-amd64.tar.gz"
-      sha256 "ebc82fbc38595ae275901cb7a9bb5a6f6b944aeb180d0b5b6efb1a141f2d6a46"
+      sha256 "db0fa079c9acc45864556277b45e78e3dcf835b7249bac4694d0c4240ded465a"
     end
     if Hardware::CPU.arm?
       url "https://github.com/fingcloud/cli/releases/download/v0.1.10/fing-darwin-arm64.tar.gz"
-      sha256 "b9b9db94f10471d6d0918ec09ed77268a3be52a778b71f7ab68ea25f1d734469"
+      sha256 "efbaef992af7a0e2acc1478add3f5aa8655318c7c6787d2d69e0a4076fc5a5ea"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/fingcloud/cli/releases/download/v0.1.10/fing-linux-amd64.tar.gz"
-      sha256 "bf2e5b57824ae7669270fe356581fdb1c2e872056a81043da1bdea7b7d921207"
+      sha256 "65f8a4208a06781bca6bc4cc44699abb0ec3da20c3a81604a42e89f55ed6ec9b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/fingcloud/cli/releases/download/v0.1.10/fing-linux-arm64.tar.gz"
-      sha256 "65e659b9fbcae7bc7b7172c707731cf67f80710ff2bca6a4dc7ac6e831392329"
+      sha256 "af22353236ea326a06ca9e84017a6b052b8fbbbe4d42f8ddcc2b454a869c31d0"
     end
   end
 
