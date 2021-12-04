@@ -5,33 +5,44 @@
 class Fing < Formula
   desc ""
   homepage "https://fing.ir"
-  version "0.1.11"
-  bottle :unneeded
+  version "0.1.12"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.11/fing-darwin-amd64.tar.gz"
-      sha256 "bd6357620debfd265fc2b7f82e4d8643adb5337390df4a638c8f9a37bff78663"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-darwin-amd64.tar.gz"
+      sha256 "796c5689d2edc1333c6fc75f5912e3cdfa288d27f8689ab80626e7d94ac7bb29"
+
+      def install
+        bin.install "fing"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.11/fing-darwin-arm64.tar.gz"
-      sha256 "adfa71e25949d4269a11900894e85aeee6da434d9b470a489e95c11c13012beb"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-darwin-arm64.tar.gz"
+      sha256 "f38b1668d71fecf4de60b5b6859e746b1af6d0baf0f0179a65b6e360d29fc141"
+
+      def install
+        bin.install "fing"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.11/fing-linux-amd64.tar.gz"
-      sha256 "a5282df92eabe1d13917a3b91e6c8d9c0c3b11f50d65573527508cadb5c73f34"
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-linux-amd64.tar.gz"
+      sha256 "f3c07ac8d1490ebf878b5d922177ee7c006bcb07adba6d3c07b89af27ec908c6"
+
+      def install
+        bin.install "fing"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.11/fing-linux-arm64.tar.gz"
-      sha256 "daa9bd7d341851ade9c88e0ec1af262ab59d0217c537ccb321a98acccab50875"
-    end
-  end
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-linux-arm64.tar.gz"
+      sha256 "efef41eda101e456e14e4fbcd959c3a28b89bdf48751cf45e34a9157c0e3224d"
 
-  def install
-    bin.install "fing"
+      def install
+        bin.install "fing"
+      end
+    end
   end
 
   test do
