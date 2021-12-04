@@ -5,20 +5,20 @@
 class Fing < Formula
   desc ""
   homepage "https://fing.ir"
-  version "0.1.12"
+  version "0.1.13"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-darwin-amd64.tar.gz"
-      sha256 "796c5689d2edc1333c6fc75f5912e3cdfa288d27f8689ab80626e7d94ac7bb29"
+    if Hardware::CPU.arm?
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.13/fing-darwin-arm64.tar.gz"
+      sha256 "612b9ef63fc2cdc52b92b5c19d76cd279fb096029347290140b10ac08fcc6a29"
 
       def install
         bin.install "fing"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-darwin-arm64.tar.gz"
-      sha256 "f38b1668d71fecf4de60b5b6859e746b1af6d0baf0f0179a65b6e360d29fc141"
+    if Hardware::CPU.intel?
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.13/fing-darwin-amd64.tar.gz"
+      sha256 "b12dadaedc1536007081cc2163b6bd517bb70f368da403b0e8bb7c2a006b7624"
 
       def install
         bin.install "fing"
@@ -27,17 +27,17 @@ class Fing < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-linux-amd64.tar.gz"
-      sha256 "f3c07ac8d1490ebf878b5d922177ee7c006bcb07adba6d3c07b89af27ec908c6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.13/fing-linux-arm64.tar.gz"
+      sha256 "39023c26c984e7a239a37d0f06378f3ea92326f07cc3b923c15fdc3bb860b81a"
 
       def install
         bin.install "fing"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fingcloud/cli/releases/download/v0.1.12/fing-linux-arm64.tar.gz"
-      sha256 "efef41eda101e456e14e4fbcd959c3a28b89bdf48751cf45e34a9157c0e3224d"
+    if Hardware::CPU.intel?
+      url "https://github.com/fingcloud/cli/releases/download/v0.1.13/fing-linux-amd64.tar.gz"
+      sha256 "5188b64f92783972640dcfdf614cc43fa1937ad157f1b3991a66a7db0bc838e5"
 
       def install
         bin.install "fing"
