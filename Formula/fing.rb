@@ -5,20 +5,20 @@
 class Fing < Formula
   desc ""
   homepage "https://fing.ir"
-  version "0.2.6"
+  version "0.2.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fingcloud/cli/releases/download/v0.2.6/fing-darwin-arm64.tar.gz"
-      sha256 "a025b6bac301863d544f7c58c0d45e8298eca4ac6f7f1ef96adbc9b8435bbbbb"
+      url "https://github.com/fingcloud/cli/releases/download/v0.2.7/fing-darwin-arm64.tar.gz"
+      sha256 "fa5131b6ec43480f9393e89b57467082a78c97a155655c107e4ae4753f67d038"
 
       def install
         bin.install "fing"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.2.6/fing-darwin-amd64.tar.gz"
-      sha256 "b7c82fd82f05e6d15935db37555b084b2cd0492ada92fe9450333e4919ae9167"
+      url "https://github.com/fingcloud/cli/releases/download/v0.2.7/fing-darwin-amd64.tar.gz"
+      sha256 "5577d640216e16447558a9b39e56f728e390631cc71fa86a8fb737c25b627a3e"
 
       def install
         bin.install "fing"
@@ -27,17 +27,17 @@ class Fing < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fingcloud/cli/releases/download/v0.2.6/fing-linux-arm64.tar.gz"
-      sha256 "c1117f2b3af8c9e04f7eda1908ef8a9dc21f8f464a48784fcff0f54fd937d7a8"
+    if Hardware::CPU.intel?
+      url "https://github.com/fingcloud/cli/releases/download/v0.2.7/fing-linux-amd64.tar.gz"
+      sha256 "83b2eb37b21ef485fbbd1ab373b4dcba02f3d0feec4a30198e38fbd1811cedc2"
 
       def install
         bin.install "fing"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fingcloud/cli/releases/download/v0.2.6/fing-linux-amd64.tar.gz"
-      sha256 "7cd44b9f4ad1230f95f4cd716571691c1103e36c2297e1e62664132c31d5c573"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fingcloud/cli/releases/download/v0.2.7/fing-linux-arm64.tar.gz"
+      sha256 "f0979b89b060bb05d21835916b05f5b34444e3b2c97b14d0c453dc7013681d7d"
 
       def install
         bin.install "fing"
